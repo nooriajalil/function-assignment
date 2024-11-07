@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Alert with Function</title>
+  <script>
+    // qno1
+    function showAlert() {
+      alert('You clicked the link!');
+    }
+    // qno2
+    function showAlert(message) {
+      alert(message);
+    }
+    // qno3
+    function changeImage() {
+      document.getElementById('image').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToNXGxiGQhY-9sZ-5ct0n_mVCgftm44YFelw&s';
+    }
+
+    // Function to revert the image on mouseout
+    function revertImage() {
+      document.getElementById('image').src = 'https://creations.mattel.com/cdn/shop/files/tie-dye-hat-cotton-candy-front-649210ed64338.png?v=1689700476';
+    }
+
+    // qno4
+    let counter = 0;
+
+function increase() {
+  counter++;
+  document.getElementById('counter').innerText = counter;
+}
+
+function decrease() {
+  counter--;
+  document.getElementById('counter').innerText = counter;
+}
+
+  </script>
+</head>
+<body>
+    <!-- qno1 -->
+  <a href="" onclick="showAlert()">Click me</a>
+  <!-- qno2 -->
+   
+  <img src="https://image.similarpng.com/very-thumbnail/2022/03/Red-car-on-transparent-background-PNG.png" alt="car 1" width="100" onclick="showAlert('This is Mobile 1!')">
+  <img src="https://e7.pngegg.com/pngimages/291/917/png-clipart-car-car-white-thumbnail.png" alt="car 2" width="100" onclick="showAlert('This is Mobile 2!')">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWdydeGLut0aemshMq7GPTbShmpPyzYpkbdWW80MZ7QOq-nQKXT3zhaULtzt6cD-jMQC0&usqp=CAU" alt="car 3" width="100" height="80" onclick="showAlert('This is Mobile 3!')">
+
+   <!-- qno3 -->
+   <img id="image" src="https://creations.mattel.com/cdn/shop/files/tie-dye-hat-cotton-candy-front-649210ed64338.png?v=1689700476" alt="Image" width="100" onmouseover="changeImage()" onmouseout="revertImage()">
+   <!-- qno4 --> 
+   <p>Counter: <span id="counter">0</span></p>
+   <button onclick="increase()">Increase</button>
+   <button onclick="decrease()">Decrease</button> 
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // qno1
+        function sigupform() {
+            var name = document.getElementById("name")
+            var email = document.getElementById("email")
+            var password = document.getElementById("password")
+            if(name.value .trim() && email.value .trim()  && password.value .trim() ){
+            console.log(name.value);
+            console.log(email.value);
+            console.log(password.value);
+            name.value = ""
+            email.value = ""
+            password.value = ""
+
+            }
+            else{
+                console.log("Please enter your value");
+                
+            }  
+        }
+
+        // qno2
+        function readMore() {
+            var shorttext = "This is the short description of the item that the user sees first"
+            var text = "Here is the full detail of the item that is hidden initially. This section becomes visible after clicking the "
+            var para = document.getElementById("para")
+
+            var btn = document.getElementById("btn")
+            
+            if ( btn.innerHTML = "Read More") {
+                para.innerHTML = text
+                 btn.innerHTML = "seeless"
+            }
+            else{
+                para.innerHTML = shorttext
+                btn.innerHTML = "Read More"
+
+            }
+            
+        }
+
+
+        
+
+
+
+    </script>
+</head>
+<body>
+    <!-- qno1 -->
+     <div>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <input type="email" id="email" placeholder="Enter your your email">
+        <br>
+        <input type="password"  id="password" placeholder="Enter your password">
+        <br>
+        <button type="submit"  onclick="sigupform()">sigup</button> 
+
+       
+    </div>
+
+       <!-- qno1 -->
+       <p id="para">
+        This is the short description of the item that the user sees first.
+    </p>
+    <button id="btn" onclick="readMore()">Read More</button>
+
+
+
+
+
+    <div>
+        <h1> DOM </h1>
+        <div id=”form-content” class=”content”>
+        <label for=”first-name”>First Name</label>
+        <input type=”text” id=”first-name” />
+        <label for=”last-name”>Last Name</label>
+        <input type=”text” id=”last-name” />
+        <label for=”email”>Email</label>
+        <input type=”text” id=”email” />
+        </div>
+        <div id=”main-content” class=”content”>
+        <p class=”render”> First Name : Alex</p>
+        <p class=”render” id=”lastName”>Last Name: Bank</p>
+        <p class=”render”> Email : alexbank@example.com</p>
+        <p class=”render”> Country : Pakistan </p>
+        <p class=”render”> contact : +92 300 1234567</p>
+        </div>
+        </div>
+
+
+
+
+    
+
+    
+</body>
+</html>
